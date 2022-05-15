@@ -10,11 +10,11 @@ public class SQRServiceTest {
     @ParameterizedTest
     @CsvFileSource(resources = {"/testdata.csv"})
 
-    public void test(int MinLimit, int MaxLimit, int expected) {
+    public void test(int minLimit, int maxLimit, int expected) {
 
         SQRService counter = new SQRService();
 
-        int actual = counter.counter(MinLimit, MaxLimit);
+        int actual = counter.counter(minLimit, maxLimit);
 
         Assertions.assertEquals(expected, actual);
     }
